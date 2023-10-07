@@ -1,7 +1,7 @@
 package com.example.tictactoe.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.tictactoe.model.ticTacToe;
+import com.example.tictactoe.model.TicTacToe;
 public class MessageController {
 /**
  * Template for sending essages to clients through the messagebroker.
