@@ -133,7 +133,7 @@ public class TicTacToe {
     if (Objects.equals(board[0][0], board[1][1]) && 
     Objects.equals(board[0][0], board[2][2])) {
         if (!Objects.equals(board[0][0], " ")) {
-            setWinner(Objects.equals(board[0][0, player1]) ? player1 : player2);
+            setWinner(Objects.equals(board[0][0], player1) ? player1 : player2);
             return;
         }
     }
@@ -143,7 +143,7 @@ public class TicTacToe {
          * Updates game state based on current state of a game.
          */
         private void updateGameState() {
-            if (winner !== null) {
+            if (winner != null) {
                 gameState = winner.equals(player1) ? GameState.PLAYER1_WON : GameState.PLAYER2_WON;
             } else if (isBoardFull()) {
                 gameState = GameState.TIE;
@@ -170,7 +170,7 @@ public class TicTacToe {
          * @return true if the game is over, false otherwise
          */
         public boolean isGameOver() {
-            return winner !== null || isBoardFull();
+            return winner != null || isBoardFull();
         }
         /**!SECTION
          * Getters and Setters
@@ -204,13 +204,12 @@ public class TicTacToe {
         public String getWinner() {
             return winner;
         }
-        
     // Record the winner of current game and update game history
     public void setWinner(String winner) {
         this.winner = winner;
         gameHistory.add(winner);
     }
-        public String getTurn(String turn) {
+        public String getTurn() {
             return turn;
         }
         public void setTurn(String turn) {
