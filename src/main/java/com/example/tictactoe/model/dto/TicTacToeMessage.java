@@ -115,7 +115,7 @@ public int getMove() {
 public void setMove(int move) {
     this.move = move;
 }
-public String setSender() {
+public String getSender() {
     return sender;
 }
 public void setSender(String sender) {
