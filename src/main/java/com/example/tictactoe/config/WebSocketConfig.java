@@ -5,7 +5,6 @@ import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
-
 /**!SECTION
  * Configuration for setting up WebSocket messaging in the application.
  * Enables the use of @STOMP (Simple Text Oriented Messaging Protocol) for sending
@@ -35,7 +34,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.setApplicationDestinationPrefixes("/app");
         registry.enableSimpleBroker("/queue", "/topic", "/user");
-        registry.setUserDestinationPrefix()
+        registry.setUserDestinationPrefix("/user");
     }
 
 }
