@@ -37,7 +37,7 @@ public synchronized TicTacToe joinGame(String player) {
 
     for (TicTacToe game : games.values()) {
         if (game.getPlayer1() != null && game.getPlayer2() == null) {
-            game.setPLayer2(player);
+            game.setPlayer2(player);
             game.setGameState(GameState.PLAYER1_TURN);
             return game;
         }
@@ -56,8 +56,8 @@ public synchronized TicTacToe leaveGame(String player) {
         TicTacToe game = games.get(gameId);
         if (player.equals(game.getPlayer1())) {
             if (game.getPlayer2() != null) {
-                game.setPLayer1(game.getPlayer2());
-                game.setPLayer2(null);
+                game.setPlayer1(game.getPlayer2());
+                game.setPlayer2(null);
                 game.setGameState(GameState.WAITING_FOR_PLAYER);
                 System.out.println("Game is over. Thank you for playing. New game began automatically");
                 game.setBoard(new String[3][3]);
@@ -68,7 +68,7 @@ public synchronized TicTacToe leaveGame(String player) {
             }
 
         } else if (player.equals(game.getPlayer2())) {
-            game.setPLayer2(null);
+            game.setPlayer2(null);
             game.setGameState(GameState.WAITING_FOR_PLAYER);
             game.setBoard(new String[3][3]);
             waitingPlayers.put(game.getPlayer1(), game.getGameId());
