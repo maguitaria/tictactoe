@@ -22,7 +22,6 @@ public class TicTacToe {
 
     private String winner;
     private String turn;
-    private String startingPlayer;
     private GameState gameState;
 
     // Create a list to store game history
@@ -49,6 +48,8 @@ public class TicTacToe {
     }
 
     // Method to determine starting player based on game history
+
+
     public static String determineStartingPlayer() {
         // Get the winner from game history
         String lastWinner = gameHistory.get(gameHistory.size() - 1);
@@ -80,14 +81,7 @@ public class TicTacToe {
         }
     }
 
-    // Add a method to switch the starting player for the next game
-    public void switchStartingPlayer() {
-        if (Objects.equals(turn, player1)) {
-            turn = player2;
-        } else {
-            turn = player1;
-        }
-    }
+
 
     /**!SECTION
          * Check if there is a winner; If a winner combination is find,
