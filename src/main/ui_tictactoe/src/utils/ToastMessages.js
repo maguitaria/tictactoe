@@ -2,8 +2,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import React, { useEffect, useState } from "react";
-import SockJS from "sockjs-client";
-import Stomp from "stompjs";
+import SockJS from "sockjs-client"
+import {Stomp} from "@stomp/stompjs"
 
 const TicTacToe = () => {
     const [stompClient, setStompClient] = useState();
@@ -109,7 +109,7 @@ const TicTacToe = () => {
                 toast.warning(message);
                 break;
             default:
-                toast.info(messsage);
+                toast.info(message);
                 break;
         }
     }

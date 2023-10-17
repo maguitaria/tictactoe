@@ -15,7 +15,8 @@ const App = () => {
   return (
     <div className="app">
       <h1>Tic-Tac-Toe Game</h1>
-      <Gameboard gameState={gameState}>
+     <GameBoard game={gameState} makeMove={handleSquareClick} showToast={showToast}>
+
         {gameState.board.map((value, index) => (
           <Square
             key={index}
@@ -23,7 +24,7 @@ const App = () => {
             onClick={() => handleSquareClick(index)}
           />
         ))}
-      </Gameboard>
+      </GameBoard>
     </div>
   );
 };
