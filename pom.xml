@@ -12,6 +12,7 @@
 	<artifactId>tictactoe</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tictactoe</name>
+	<packaging>jar</packaging>
 	<description>Tic Tac toe game application</description>
 	<properties>
 		<java.version>17</java.version>
