@@ -11,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Controller class for handling HTTP requests and rendering the Tic-Tac-Toe game page.
  *
- * @author Joabson Arley do Nascimento
- */
+ * @author Mariia Glushenkova 
+ *  */
 @Controller
 @RequestMapping("/")
 public class TicTacToeController {
