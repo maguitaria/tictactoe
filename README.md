@@ -1,4 +1,3 @@
-Certainly! Here's a template for a README file for your Java backend Tic-Tac-Toe game with an HTML static frontend:
 
 # Tic-Tac-Toe Multiplayer Game
 ![Alt text](image.png)
