@@ -1,10 +1,14 @@
 package com.example.tictactoe.manager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.example.tictactoe.enumeration.GameState;
 import com.example.tictactoe.model.TicTacToe;
+import com.example.tictactoe.model.dto.TicTacToeMessage;
+import com.example.tictactoe.model.dto.TicTacToeMessageStorage;
 
   /**
     * Manager class for the Tic-tac-toe games.
@@ -25,7 +29,18 @@ public class TicTacToeManager {
     public TicTacToeManager() {
         games = new ConcurrentHashMap<>();
         waitingPlayers = new ConcurrentHashMap<>();
+
+        
     }
+    
+    public TicTacToeMessage gameToMessage(TicTacToe game) {
+        TicTacToeMessage message = new TicTacToeMessage();
+   
+        TicTacToeMessageStorage.appendMessage(message);
+        TicTacToeMessageStorage.printMessagesToConsole();
+        return message;
+    }
+
 /**  Attempts to add  player ot creates a new game function
  * */
 public synchronized TicTacToe joinGame(String player) {
